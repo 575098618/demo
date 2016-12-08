@@ -10,10 +10,10 @@
        http://www.springframework.org/schema/mvc
        http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
-    <!-- 配置扫描 springmvc 的 controller 和 service 的包 -->
-    <context:component-scan base-package="com.markliu.ssm.controller"/>
-    <context:component-scan base-package="com.markliu.ssm.service"/>
-    <!--<context:component-scan base-package="com.markliu.ssm.mapper" />-->
+    <!-- 配置扫描 springmvc 的 controller 和 service 的包 -->    
+    <context:component-scan base-package="com.jun.controller"/>
+    <context:component-scan base-package="com.jun.service"/>
+    <!--<context:component-scan base-package="com.jun.mapper" />-->
     <mvc:annotation-driven conversion-service="conversionService"/>
 
     <!-- 自定义的转换器的服务 -->
@@ -22,7 +22,7 @@
         <property name="converters">
             <set>
                 <!-- 日期类型转换器 -->
-                <bean class="com.markliu.ssm.utils.converter.DateConverter"/>
+                <bean class="com.jun.converter.DateConverter"/>
                 <!-- 其他类型转换器 -->
 
             </set>

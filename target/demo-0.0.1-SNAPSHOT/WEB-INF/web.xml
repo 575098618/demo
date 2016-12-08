@@ -25,12 +25,13 @@
     <filter-mapping>
         <filter-name>CharacterEncodingFilter</filter-name>
         <url-pattern>/*</url-pattern>
-    </filter-mapping>
+    </filter-mapping> 
+    
   
   <!-- 加载 spring 容器 -->
     <context-param>
         <param-name>contextConfigLocation</param-name>
-        <param-value>/WEB-INF/classes/config/spring/applicationContext-*.xml</param-value>
+        <param-value>classpath:config/spring/applicationContext-*.xml</param-value>
     </context-param>
     <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
@@ -56,4 +57,18 @@
          -->
         <url-pattern>/</url-pattern>
     </servlet-mapping>
+    
+    <!-- 修正spring.liveBeans not found 错误 -->
+    <context-param>  
+       <param-name>spring.profiles.active</param-name>  
+       <param-value>dev</param-value>  
+    </context-param>  
+    <context-param>  
+       <param-name>spring.profiles.default</param-name>  
+       <param-value>dev</param-value>  
+    </context-param>
+    <context-param>  
+       <param-name>spring.liveBeansView.mbeanDomain</param-name>  
+       <param-value>dev</param-value>  
+    </context-param>  
 </web-app>

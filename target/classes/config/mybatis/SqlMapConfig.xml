@@ -20,10 +20,10 @@
     -->
     <mappers>
         <!-- maven 的目录结构下的resources为classpath -->
-        <mapper resource="src/main/java/com/jun/mapper/ItemsCustomMapper.xml" />
-        <mapper resource="src/main/java/com/jun/mapper/ItemsMapper.xml" />
-        <mapper resource="src/main/java/com/jun/mapper/OrderDetailMapper.xml" />
-        <mapper resource="src/main/java/com/jun/mapper/OrdersMapper.xml" />
-        <mapper resource="src/main/java/com/jun/mapper/UserMapper.xml" />
+        <mapper resource="config/mybatis/mapper/ItemsCustomMapper.xml" />
+        <mapper resource="config/mybatis/mapper/ItemsMapper.xml" />
+        <mapper resource="config/mybatis/mapper/OrderDetailMapper.xml" />
+        <mapper resource="config/mybatis/mapper/OrdersMapper.xml" />
+        <mapper resource="config/mybatis/mapper/UserMapper.xml" />
     </mappers>
 </configuration>
